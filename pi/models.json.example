@@ -1,0 +1,48 @@
+{
+  "providers": {
+    "llamacpp-3spark-inkling2-small": {
+      "baseUrl": "http://192.168.1.112:8090/v1",
+      "api": "openai-completions",
+      "apiKey": "local",
+      "compat": {
+        "supportsStore": false,
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false,
+        "supportsStrictMode": false,
+        "thinkingFormat": "chat-template",
+        "chatTemplateKwargs": {
+          "reasoning_effort": {
+            "$var": "thinking.effort"
+          }
+        },
+        "maxTokensField": "max_tokens"
+      },
+      "models": [
+        {
+          "id": "inkling-2-small",
+          "name": "Inkling 2 Small IQ4_XS 256K (llama.cpp RPC @ 3x DGX Spark)",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 262144,
+          "maxTokens": 32768,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "thinkingLevelMap": {
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "xhigh": "xhigh",
+            "max": "max"
+          }
+        }
+      ]
+    }
+  }
+}
